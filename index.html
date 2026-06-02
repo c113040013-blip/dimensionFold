@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>折疊者 | 電影募資與觀眾互動計畫</title>
+    <meta
+      name="description"
+      content="《折疊者》電影官方企劃網站，結合募資、觀眾投票、世界觀互動與行銷活動。"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="foldCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="折疊者首頁">
+        <span class="brand-mark"></span>
+        <span>折疊者</span>
+      </a>
+      <nav class="top-nav" aria-label="主要導覽">
+        <a href="#funding">募資</a>
+        <a href="#interaction">互動</a>
+        <a href="#budget">預算</a>
+        <a href="#story">故事</a>
+        <a href="#tiers">方案</a>
+      </nav>
+      <a class="nav-cta" href="#tiers">支持拍攝</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="kicker">科幻電影募資計畫</p>
+          <h1 id="heroTitle">折疊者</h1>
+          <p class="logline">
+            我們創造的一切，都是從宇宙某處偷來的。
+          </p>
+          <div class="hero-actions" aria-label="主要行動">
+            <a class="primary-button" href="#tiers">立即贊助</a>
+            <a class="ghost-button" href="#interaction">參與觀眾抉擇</a>
+          </div>
+        </div>
+
+        <aside class="funding-console" id="funding" aria-label="募資進度">
+          <div class="console-topline">
+            <span>創世爐啟動資金</span>
+            <strong id="fundingPercent">68%</strong>
+          </div>
+          <div class="progress-track" aria-label="募資進度">
+            <span id="progressBar"></span>
+          </div>
+          <div class="funding-numbers">
+            <div>
+              <span>已募集</span>
+              <strong id="raisedAmount">NT$ 8,160,000</strong>
+            </div>
+            <div>
+              <span>目標</span>
+              <strong id="goalAmount">NT$ 12,000,000</strong>
+            </div>
+          </div>
+          <div class="supporters">
+            <span id="supporterCount">3,428</span>
+            <span>位觀眾正在把星光推回大銀幕</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section intro-band" aria-labelledby="introTitle">
+        <div>
+          <p class="eyebrow">企劃定位</p>
+          <h2 id="introTitle">硬科幻奇觀，包著一個關於代價的問題。</h2>
+        </div>
+        <p>
+          《折疊者》以維度折疊技術作為核心：人類能把高維能量壓縮成三維物質，
+          終結能源、糧食與醫療危機；但每一次創造，都會讓宇宙其他角落變薄。
+          這個網站讓觀眾不只看見電影，也能提前參與它的道德選擇。
+        </p>
+      </section>
+
+      <section class="section split-section" aria-labelledby="storyTitle" id="story">
+        <div class="story-panel">
+          <p class="eyebrow">故事引擎</p>
+          <h2 id="storyTitle">當拯救人類的技術，其實正在折斷宇宙。</h2>
+          <p>
+            年輕物理學家林澈成功製造第一塊折疊物質，世界迎來短暫繁榮。
+            能源調查員沈微發現遠方星系逐漸消失，而折疊事故中誕生的少年阿零，
+            揭露人類所謂的創造，只是把痛苦搬到看不見的地方。
+          </p>
+        </div>
+        <div class="timeline" aria-label="劇情階段">
+          <article>
+            <span>01</span>
+            <h3>能量成形</h3>
+            <p>白塔實驗城完成第一次折疊，物質從虛空墜落。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>星空缺口</h3>
+            <p>地球繁榮擴張，宇宙邊緣卻出現不可逆空洞。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>歸還重量</h3>
+            <p>創世爐啟動前，林澈必須選擇人類捷徑或宇宙完整。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section world-lab" aria-labelledby="labTitle">
+        <div class="lab-copy">
+          <p class="eyebrow">互動世界觀</p>
+          <h2 id="labTitle">調整折疊強度，看看文明與星空如何交換重量。</h2>
+          <p>
+            這是電影行銷中的核心互動裝置原型，可放在官網、展場或社群活動頁。
+            觀眾能直覺理解：資源不是免費出現，而是從另一處被搬走。
+          </p>
+        </div>
+        <div class="lab-control">
+          <label for="foldRange">維度折疊強度</label>
+          <input id="foldRange" type="range" min="0" max="100" value="54">
+          <div class="lab-readout">
+            <div>
+              <span>地球產出</span>
+              <strong id="matterOutput">54%</strong>
+            </div>
+            <div>
+              <span>星域空洞</span>
+              <strong id="voidOutput">46%</strong>
+            </div>
+          </div>
+          <p id="foldVerdict">人類正在接近臨界舒適區，代價仍被隱藏在遠方。</p>
+        </div>
+      </section>
+
+      <section class="section" id="tiers" aria-labelledby="tiersTitle">
+        <div class="section-heading">
+          <p class="eyebrow">募資方案</p>
+          <h2 id="tiersTitle">選擇你的折疊座標</h2>
+        </div>
+        <div class="tier-grid">
+          <article class="tier-card">
+            <span class="tier-label">觀星席</span>
+            <h3>NT$ 600</h3>
+            <p>片尾感謝名單、限定電子劇照、首波預告優先觀看。</p>
+            <button data-pledge="600">贊助此方案</button>
+          </article>
+          <article class="tier-card featured">
+            <span class="tier-label">白塔通行證</span>
+            <h3>NT$ 2,400</h3>
+            <p>首映場資格、導演線上座談、概念美術數位冊。</p>
+            <button data-pledge="2400">贊助此方案</button>
+          </article>
+          <article class="tier-card">
+            <span class="tier-label">創世爐核心</span>
+            <h3>NT$ 8,800</h3>
+            <p>實體收藏票、拍攝現場導覽抽選、簽名企劃書。</p>
+            <button data-pledge="8800">贊助此方案</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section audience-zone" id="interaction" aria-labelledby="interactionTitle">
+        <div class="section-heading">
+          <p class="eyebrow">觀眾互動</p>
+          <h2 id="interactionTitle">進入白塔終端，和角色對話。</h2>
+        </div>
+
+        <div class="interaction-grid">
+          <div class="dialogue-terminal" aria-label="角色文本互動">
+            <div class="terminal-top">
+              <span></span>
+              <strong>WHITE TOWER / AUDIENCE LINK</strong>
+            </div>
+            <div class="character-tabs" role="tablist" aria-label="選擇角色">
+              <button class="is-active" data-character="lin" type="button">林澈</button>
+              <button data-character="shen" type="button">沈微</button>
+              <button data-character="zero" type="button">阿零</button>
+            </div>
+            <div class="dialogue-window" id="dialogueWindow" aria-live="polite"></div>
+            <div class="prompt-grid" id="promptGrid" aria-label="可選提問"></div>
+          </div>
+
+          <div class="engagement-panel">
+            <h3>互動行銷設計</h3>
+            <p>
+              觀眾點選角色與提問後，系統會生成角色口吻回覆，可用於社群分享、
+              預告留言引導與映前心理測驗。此區文字都集中在腳本變數中，方便替換。
+            </p>
+            <div class="engagement-metrics">
+              <div>
+                <span>角色互動次數</span>
+                <strong id="interactionCount">0</strong>
+              </div>
+              <div>
+                <span>目前偏向角色</span>
+                <strong id="favCharacter">林澈</strong>
+              </div>
+            </div>
+            <div class="decision-strip" aria-label="觀眾抉擇取樣">
+              <span>歸還星空 49%</span>
+              <span>啟動創世爐 31%</span>
+              <span>讓阿零決定 20%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section budget-section" id="budget" aria-labelledby="budgetTitle">
+        <div class="section-heading">
+          <p class="eyebrow">行銷預算比例</p>
+          <h2 id="budgetTitle">募資成功後，行銷預算占總募資 18%。</h2>
+          <p>
+            以募資目標 NT$ 12,000,000 估算，行銷預算為 NT$ 2,160,000。
+            下列比例清楚標示各項用途，數值可在 app.js 的 CAMPAIGN_CONFIG 中修改。
+          </p>
+        </div>
+        <div class="budget-layout">
+          <div class="budget-ring" aria-label="行銷預算占比">
+            <strong id="marketingBudgetPercent">18%</strong>
+            <span>行銷占總募資</span>
+          </div>
+          <div class="budget-list" id="budgetList"></div>
+        </div>
+      </section>
+
+      <section class="section character-strip" aria-label="角色介紹">
+        <article>
+          <span>林澈</span>
+          <p>相信技術能救贖世界的物理學家，最後必須承認人類不能假裝自己是神。</p>
+        </article>
+        <article>
+          <span>沈微</span>
+          <p>能源危機調查員，追查星系消失真相，把抽象倫理拉回人類眼前。</p>
+        </article>
+        <article>
+          <span>阿零</span>
+          <p>折疊事故中出現的少年，既是未知生命的回聲，也是宇宙記憶的證詞。</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>《折疊者》電影募資與觀眾互動網站</strong>
+        <p>概念提案版：整合募資轉換、互動投票、行銷敘事與世界觀體驗。</p>
+      </div>
+      <a href="#top">返回頂端</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
